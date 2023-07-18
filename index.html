@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project status</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-left: 4px solid #555555;
+      font-weight: bold;
+      transition: all 0.3s ease; /* Добавляем плавный переход */
+      position: relative; /* Добавляем относительное позиционирование */
+    }
+
+    .in-development {
+      border-color: #ffcc00;
+      background-color: #fff8e5;
+    }
+
+    .close {
+      border-color: #ff0000;
+      background-color: #ffe6e6;
+    }
+
+    .in-updating {
+      border-color: #3399ff;
+      background-color: #eaf3ff;
+    }
+
+    .active {
+      border-color: #00cc00;
+      background-color: #e5ffe5;
+    }
+
+    #in-development {
+      color: #ffcc00;
+    }
+
+    #close {
+      color: #ff0000;
+    }
+
+    #in-updating {
+      color: #3399ff;
+    }
+
+    #active {
+      color: #00cc00;
+    }
+
+    /* Добавленный стиль для блока с информацией о знаниях */
+    #knowledge {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      border-top: 2px solid #555555;
+      padding-top: 20px;
+    }
+
+    #knowledge img {
+      max-width: 100px;
+    }
+
+    #knowledge p {
+      font-size: 18px;
+      margin-left: 20px;
+    }
+
+    #knowledge.left {
+      flex-direction: row-reverse;
+    }	
+	#certificates-container {
+      display: flex;
+      overflow-x: auto; /* Горизонтальная прокрутка */
+      scroll-snap-type: x mandatory; /* Принудительный магнитный прокрутка по горизонтали */
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    .certificate {
+      scroll-snap-align: start; /* Магнитное выравнивание для прокрутки */
+      margin-right: 10px;
+    }
+
+    .certificate img {
+      max-width: 200px; /* Ограничение размера сертификатов */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+	.profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .profile img {
+      width:250px;
+      height: 450px;
+      border-radius: 8%;
+	  align-items: right;
+      border: 4px solid #555555;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>About me</h1>
+
+    <div class="profile">
+      <img src="me.jpg" alt="me">
+    </div>
+
+    <div class="profile-text">
+      <p>Hello, I'm Dmytro. I from Ukraine and I'm 16 years old. I like programing. I love to make Windows and Android application with Firebase. Wanna learn assembly. <br>
+	  About my 	nature: sociable, helpful, volonteer and member of ukrainian scout organization "Plast"<br>
+	  e-mail: dmytroparkhomenko06@gmail.com<br>
+	  Telegram: @mr_maderator_yt</p>
+    </div>
+  </div>
+  <div class="container">
+    <h1>Projects</h1>
+
+    <ul>
+      <li class="in-development"><span id="in-development">In Development</span> Minecraft Core - CyberCore
+        
+      </li>
+      <li class="in-development"><span id="in-development">In Development</span> Mobile OS - CyberMOS
+        
+      </li>
+      <li class="in-development"><span id="in-development">In Development</span> Windows application - Flowy Browser
+        
+      </li>
+      <li class="close"><span id="close">Closed</span> Android application -  Flowy Browser
+	  </li>
+      <li class="close"><span id="close">Closed</span> Android application -  Lim Counter  
+      </li>
+      <li class="in-updating"><span id="in-updating">In updating</span> Android application - Tank Battle Strategy
+        
+      </li>
+      <li class="in-updating"><span id="in-updating">In updating</span> Android application - CCS Code
+        
+      </li>
+      <li class="active"><span id="active">Done</span> Minecraft Server
+        
+      </li>
+      <li class="active"><span id="active">Done</span> Android application -  Lost Girl
+      </li>
+	  <li class="active"><span id="active">Done</span> Android application -  Strange Room
+      </li>
+    </ul>
+  </div>
+    <div class="container">
+
+  <div id="knowledge">
+      <img src="java.png" alt="Java" >
+      <p>I use java more than 2 years for my projects</p>
+    </div>
+
+    <div id="knowledge">
+      <p>Use it for web android apps</p>
+      <img src="js.png" alt="JavaScript">
+    </div>
+
+    <div id="knowledge">
+      <img src="go.png" alt="GoLang">
+      <p>Trying to make minecraft core using this language</p>
+    </div>
+
+    <div id="knowledge">
+      <p>I know C. Just for fun and making os</p>
+      <img src="C.png" alt="C">
+    </div>
+
+    <div id="knowledge">
+      <img src="csh.png" alt="C#">
+      <p>I know C# for game dev</p>
+    </div>
+	<div id="knowledge">
+      <img src="php.png" alt="PHP">
+      <p>Use for web servers</p>
+    </div>
+  </div>
+</div>
+  </div>
+   <div id="certificates-container">
+   <h1>Certificates from 2021</h1>
+      <div class="certificate">
+        <img src="javap.png" alt="Certificate 1">
+      </div>
+      <div class="certificate">
+        <img src="javaip.png" alt="Certificate 2">
+      </div>
+	  <div class="certificate">
+        <img src="javar.jpg" alt="Certificate 3">
+      </div>
+	  <div class="certificate">
+        <img src="javar2.jpg" alt="Certificate 4">
+      </div>
+      <div class="certificate">
+        <img src="cp.png" alt="Certificate 4">
+      </div>
+	  <div class="certificate">
+        <img src="cshp.png" alt="Certificate 5">
+      </div>
+	  <div class="certificate">
+        <img src="jsp.png" alt="Certificate 6">
+      </div>
+	  <div class="certificate">
+        <img src="webp.png" alt="Certificate 7">
+      </div>
+	  <div class="certificate">
+        <img src="htmlp.png" alt="Certificate 8">
+      </div>
+	  <div class="certificate">
+        <img src="cssp.png" alt="Certificate 9">
+      </div>
+	  <div class="certificate">
+        <img src="phpp.png" alt="Certificate 10">
+      </div>
+	  <div class="certificate">
+        <img src="apeyron.jpg" alt="Certificate 11">
+      </div>
+      <!-- Добавьте больше сертификатов по аналогии -->
+    </div>
+	
+  </div>
+  </body>
+</html>
